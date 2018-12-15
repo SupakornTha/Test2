@@ -64,7 +64,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             Toast.makeText(this, "Pls enter password", Toast.LENGTH_SHORT).show();
             return;
         }
-        progressDialog.setMessage("Registering Pls wait...");
+        progressDialog.setMessage("Logging In Pls wait...");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
